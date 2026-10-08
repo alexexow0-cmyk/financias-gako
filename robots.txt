@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alexexow0-cmyk.github.io/financias-gako/sitemap.xml

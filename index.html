@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Financias Gako ayuda a mejorar tus decisiones financieras con calculadoras, guías y herramientas para ahorrar, invertir y organizar tu dinero." />
+    <meta name="theme-color" content="#0b1320" />
+    <meta property="og:title" content="Financias Gako | Herramientas financieras útiles" />
+    <meta property="og:description" content="Calcula tus metas, préstamos y presupuesto con herramientas sencillas para tomar mejores decisiones financieras." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://alexexow0-cmyk.github.io/financias-gako/assets/favicon.svg" />
+    <meta property="og:url" content="https://alexexow0-cmyk.github.io/financias-gako/" />
+    <link rel="canonical" href="https://alexexow0-cmyk.github.io/financias-gako/" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <title>Financias Gako | Calculadoras y educación financiera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="Financias Gako inicio">
+          <span class="brand-mark">F</span>
+          <span>Financias Gako</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#calculadoras">Calculadoras</a>
+          <a href="#aprende">Aprende</a>
+          <a href="#encuestas">Encuestas</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Finance con claridad</p>
+            <h1>Tu aliado para ahorrar, calcular y decidir mejor.</h1>
+            <p class="lead">
+              Financias Gako te ayuda a entender tus números, planificar metas y tomar decisiones financieras con más confianza.
+            </p>
+            <div class="hero-actions">
+              <a href="#calculadoras" class="btn btn-primary">Ver calculadoras</a>
+              <a href="#aprende" class="btn btn-secondary">Aprender más</a>
+            </div>
+            <ul class="hero-points">
+              <li>Herramientas rápidas</li>
+              <li>Guías útiles</li>
+              <li>Decisiones más claras</li>
+            </ul>
+          </div>
+
+          <div class="hero-card" aria-label="Resumen financiero ejemplo">
+            <div class="mini-panel">
+              <span class="tag">Resumen</span>
+              <strong>Meta: €12.000</strong>
+              <small>Objetivo: ahorro anual</small>
+            </div>
+            <div class="metric-row">
+              <div>
+                <span class="label">Ingreso</span>
+                <strong>€3.200</strong>
+              </div>
+              <div>
+                <span class="label">Gasto</span>
+                <strong>€2.050</strong>
+              </div>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-label">
+                <span>Progreso</span>
+                <strong>68%</strong>
+              </div>
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+            <div class="insight-box">
+              <span>Insight</span>
+              <p>Puedes ahorrar €1.150 al mes para cumplir tu objetivo antes del plazo previsto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats container" aria-label="Estadísticas">
+        <article class="stat-card">
+          <strong>+1.500</strong>
+          <span>usuarios activos</span>
+        </article>
+        <article class="stat-card">
+          <strong>35%</strong>
+          <span>ahorro medio</span>
+        </article>
+        <article class="stat-card">
+          <strong>4.8/5</strong>
+          <span>valoración</span>
+        </article>
+        <article class="stat-card">
+          <strong>24/7</strong>
+          <span>acceso</span>
+        </article>
+      </section>
+
+      <section id="calculadoras" class="calculator-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Calculadoras</p>
+            <h2>Herramientas para tomar mejores decisiones.</h2>
+          </div>
+
+          <div class="calculator-grid">
+            <article class="calc-card">
+              <h3>Calculadora de ahorro</h3>
+              <form id="savingsForm" class="calc-form">
+                <label>
+                  Meta (€)
+                  <input type="number" id="goalAmount" min="100" step="100" value="12000" required />
+                </label>
+                <label>
+                  Años
+                  <input type="number" id="goalYears" min="1" step="1" value="3" required />
+                </label>
+                <label>
+                  Interés anual (%)
+                  <input type="number" id="goalRate" min="0" step="0.1" value="4" required />
+                </label>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+              </form>
+              <div class="result-box">
+                <span>Necesitas ahorrar</span>
+                <strong id="savingsResult">€0.00 / mes</strong>
+              </div>
+            </article>
+
+            <article class="calc-card">
+              <h3>Simulador de préstamo</h3>
+              <form id="loanForm" class="calc-form">
+                <label>
+                  Capital (€)
+                  <input type="number" id="loanPrincipal" min="100" step="100" value="20000" required />
+                </label>
+                <label>
+                  Interés anual (%)
+                  <input type="number" id="loanRate" min="0" step="0.1" value="5.5" required />
+                </label>
+                <label>
+                  Meses
+                  <input type="number" id="loanMonths" min="6" step="1" value="48" required />
+                </label>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+              </form>
+              <div class="result-box">
+                <span>Cuota mensual</span>
+                <strong id="loanResult">€0.00</strong>
+              </div>
+            </article>
+
+            <article class="calc-card wide-card">
+              <h3>Planificador de presupuesto</h3>
+              <form id="budgetForm" class="calc-form budget-form">
+                <div class="two-col">
+                  <label>
+                    Ingresos mensuales (€)
+                    <input type="number" id="income" min="0" step="50" value="3200" required />
+                  </label>
+                  <label>
+                    Vivienda (€)
+                    <input type="number" id="housing" min="0" step="10" value="950" required />
+                  </label>
+                </div>
+                <div class="two-col">
+                  <label>
+                    Alimentación (€)
+                    <input type="number" id="food" min="0" step="10" value="500" required />
+                  </label>
+                  <label>
+                    Transporte (€)
+                    <input type="number" id="transport" min="0" step="10" value="220" required />
+                  </label>
+                </div>
+                <div class="two-col">
+                  <label>
+                    Ocio (€)
+                    <input type="number" id="leisure" min="0" step="10" value="280" required />
+                  </label>
+                  <label>
+                    Otros (€)
+                    <input type="number" id="others" min="0" step="10" value="300" required />
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Analizar</button>
+              </form>
+              <div class="result-box budget-box">
+                <span>Resultado</span>
+                <strong id="budgetResult">€0.00 disponibles</strong>
+                <small id="budgetNote">Revisa tus gastos y ajusta tu ahorro mensual.</small>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="aprende" class="learn-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Aprende</p>
+            <h2>Guías para mejorar tu relación con el dinero.</h2>
+          </div>
+
+          <div class="learn-grid">
+            <article class="info-card">
+              <span class="card-tag">Ahorro</span>
+              <h3>Cómo crear un fondo de emergencia</h3>
+              <p>Establece una reserva mínima equivalente a 3-6 meses de gastos esenciales para protegerte ante imprevistos.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-tag">Deuda</span>
+              <h3>Prioriza el pago de deudas</h3>
+              <p>Empieza por las de mayor tasa de interés y evita pedir más crédito si tu capacidad de pago está ajustada.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-tag">Inversión</span>
+              <h3>Invierte con una estrategia clara</h3>
+              <p>Define tus objetivos, horizonte temporal y tolerancia al riesgo antes de elegir productos o fondos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="encuestas" class="survey-section">
+        <div class="container survey-wrap">
+          <div class="survey-copy">
+            <p class="eyebrow">Encuestas</p>
+            <h2>Queremos ayudarte mejor.</h2>
+            <p>Responde a esta breve encuesta para orientarte con consejos financieros más útiles según tu situación actual.</p>
+          </div>
+
+          <form id="surveyForm" class="survey-form">
+            <label>
+              ¿Cuál es tu objetivo principal?
+              <select id="goalType">
+                <option value="ahorro">Ahorrar</option>
+                <option value="deuda">Reducir deuda</option>
+                <option value="inversion">Invertir</option>
+                <option value="presupuesto">Organizar presupuesto</option>
+              </select>
+            </label>
+            <label>
+              ¿Cuál es tu nivel de experiencia financiera?
+              <select id="experienceLevel">
+                <option value="principiante">Principiante</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary">Enviar respuesta</button>
+            <p id="surveyMessage" class="survey-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#home" class="brand footer-brand">
+            <span class="brand-mark">F</span>
+            <span>Financias Gako</span>
+          </a>
+          <p>Educación y herramientas financieras para decidir con más perspectiva.</p>
+        </div>
+
+        <div>
+          <h3>Explorar</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#calculadoras">Calculadoras</a></li>
+            <li><a href="#aprende">Aprende</a></li>
+            <li><a href="#encuestas">Encuestas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:hola@financiasgako.com">hola@financiasgako.com</a></li>
+            <li><a href="tel:+34600000000">+34 600 000 000</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© <span id="currentYear"></span> Financias Gako</span>
+        <span>Hecho para tomar decisiones mejores.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
